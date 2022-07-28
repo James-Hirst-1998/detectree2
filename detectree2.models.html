@@ -169,52 +169,6 @@ EPSG: area code of tree location</p>
 </dd></dl>
 
 </section>
-<section id="module-detectree2.models.Old_F1_calculator">
-<span id="detectree2-models-old-f1-calculator-module"></span><h2>detectree2.models.Old_F1_calculator module<a class="headerlink" href="#module-detectree2.models.Old_F1_calculator" title="Permalink to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="detectree2.models.Old_F1_calculator.PolyArea">
-<span class="sig-prename descclassname"><span class="pre">detectree2.models.Old_F1_calculator.</span></span><span class="sig-name descname"><span class="pre">PolyArea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature=&lt;class</span> <span class="pre">'dict'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#detectree2.models.Old_F1_calculator.PolyArea" title="Permalink to this definition"></a></dt>
-<dd><p>Take a featrue from a geojson and calculates the area of the polygon</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="detectree2.models.Old_F1_calculator.all_polys_area">
-<span class="sig-prename descclassname"><span class="pre">detectree2.models.Old_F1_calculator.</span></span><span class="sig-name descname"><span class="pre">all_polys_area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features=&lt;class</span> <span class="pre">'list'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#detectree2.models.Old_F1_calculator.all_polys_area" title="Permalink to this definition"></a></dt>
-<dd><p>Take a list of polygons and find the corresponding area of each of them</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="detectree2.models.Old_F1_calculator.f1_cal">
-<span class="sig-prename descclassname"><span class="pre">detectree2.models.Old_F1_calculator.</span></span><span class="sig-name descname"><span class="pre">f1_cal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precision</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recall</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#detectree2.models.Old_F1_calculator.f1_cal" title="Permalink to this definition"></a></dt>
-<dd><p>Calculating the F1 score</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="detectree2.models.Old_F1_calculator.intersection_data">
-<span class="sig-prename descclassname"><span class="pre">detectree2.models.Old_F1_calculator.</span></span><span class="sig-name descname"><span class="pre">intersection_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_features=&lt;class</span> <span class="pre">'list'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_features=&lt;class</span> <span class="pre">'list'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_feats_areas=&lt;class</span> <span class="pre">'dict'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_feats_areas=&lt;class</span> <span class="pre">'dict'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#detectree2.models.Old_F1_calculator.intersection_data" title="Permalink to this definition"></a></dt>
-<dd><p>Generates a dictionary of the intersections and IoU for each tile</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="detectree2.models.Old_F1_calculator.prec_recall_func">
-<span class="sig-prename descclassname"><span class="pre">detectree2.models.Old_F1_calculator.</span></span><span class="sig-name descname"><span class="pre">prec_recall_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">total_tps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_fps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_fns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#detectree2.models.Old_F1_calculator.prec_recall_func" title="Permalink to this definition"></a></dt>
-<dd><p>Calculate the precision and recall by standard formulas</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="detectree2.models.Old_F1_calculator.site_F1_score">
-<span class="sig-prename descclassname"><span class="pre">detectree2.models.Old_F1_calculator.</span></span><span class="sig-name descname"><span class="pre">site_F1_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EPSG</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#detectree2.models.Old_F1_calculator.site_F1_score" title="Permalink to this definition"></a></dt>
-<dd><p>Code to calculate all the intersections of shapes in a pair of files and the area of the corresponding polygons
-Output the test_count so</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="detectree2.models.Old_F1_calculator.threshold_positives">
-<span class="sig-prename descclassname"><span class="pre">detectree2.models.Old_F1_calculator.</span></span><span class="sig-name descname"><span class="pre">threshold_positives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile_intersection=&lt;class</span> <span class="pre">'list'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GIoU=&lt;class</span> <span class="pre">'dict'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold=0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#detectree2.models.Old_F1_calculator.threshold_positives" title="Permalink to this definition"></a></dt>
-<dd><p>Calculating the positives, only the one with the highest IoU above 0.5 is counted as a true positive</p>
-</dd></dl>
-
-</section>
 <section id="module-detectree2.models.models">
 <span id="detectree2-models-models-module"></span><h2>detectree2.models.models module<a class="headerlink" href="#module-detectree2.models.models" title="Permalink to this heading"></a></h2>
 </section>
