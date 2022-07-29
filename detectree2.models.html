@@ -156,11 +156,17 @@ updates the objects respectively</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="detectree2.models.F1_calculator.save_feats">
+<span class="sig-prename descclassname"><span class="pre">detectree2.models.F1_calculator.</span></span><span class="sig-name descname"><span class="pre">save_feats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile_directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_feats</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#detectree2.models.F1_calculator.save_feats" title="Permalink to this definition"></a></dt>
+<dd><p>Collating all the information for the features back into a geojson to save</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="detectree2.models.F1_calculator.site_F1_score">
-<span class="sig-prename descclassname"><span class="pre">detectree2.models.F1_calculator.</span></span><span class="sig-name descname"><span class="pre">site_F1_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile_directory=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_directory=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_directory=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lidar_img=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IoU_threshold=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height_threshold=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_fraction_limit=0.0005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boarder_filter=&lt;class</span> <span class="pre">'tuple'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaling=&lt;class</span> <span class="pre">'list'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EPSG=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#detectree2.models.F1_calculator.site_F1_score" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">detectree2.models.F1_calculator.</span></span><span class="sig-name descname"><span class="pre">site_F1_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile_directory=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_directory=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_directory=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lidar_img=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IoU_threshold=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height_threshold=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_fraction_limit=0.0005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boarder_filter=&lt;class</span> <span class="pre">'tuple'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaling=&lt;class</span> <span class="pre">'list'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EPSG=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#detectree2.models.F1_calculator.site_F1_score" title="Permalink to this definition"></a></dt>
 <dd><p>Calculating all the intersections of shapes in a pair of files and the area of the corresponding polygons</p>
 <dl class="simple">
-<dt>Args:</dt><dd><p>tile_directory: path to the folderr containing all of the tiles
+<dt>Args:</dt><dd><p>tile_directory: path to the folder containing all of the tiles
 test_directory: path to the folder containing just the test files
 pred_directory: path to the folder containing the predictions and the reprojections
 lidar_img: path to the lidar image of an entire region
@@ -170,7 +176,8 @@ area_fraction_limit: proportion of the tile for which crowns with areas less tha
 conf_threshold: minimun confidence of a predicted feature so that it is considered
 boarder_filter: (bool of whether to remove boarder crowns, proportion of boarder to be used in relation to tile size)
 scaling: x and y scaling used when tiling the image
-EPSG: area code of tree location</p>
+EPSG: area code of tree location
+save: bool to tell program whether the filtered crowns should be saved</p>
 </dd>
 </dl>
 </dd></dl>
